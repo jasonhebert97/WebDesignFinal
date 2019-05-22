@@ -1,0 +1,919 @@
+/***********************************************************
+ ***** RESET ALL STYLES ************************************
+ ***********************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/***********************************************************
+ ***** CSS STYLES ******************************************
+ ***********************************************************
+
+ ***** GENERAL STYLING *************************************
+ ***********************************************************/
+html, body {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	color: white;
+	font-size: 3vw;
+	font-family: 'Quicksand', sans-serif;
+	perspective: 1000px;
+	text-align: center;
+}
+
+@media (max-width: 750px) {
+	body {
+		font-size: 1.5rem;
+	}
+}
+
+img {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+section {
+	position: relative;
+	background: none;
+	width: 75vw;
+	min-height: 75vh;
+	margin: 25px auto 25px auto;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+@media (max-width: 500px) {
+	section {
+		min-height: 50vh;
+	}
+}
+
+div {
+	padding: 1vh 1vw;
+	margin: 1vh 1vw;
+	background: none;
+	/* background: green; */
+}
+
+.line {
+	/* background: grey; */
+	min-height: 70vh;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.line p {
+	display: block;
+	position: sticky;
+	top: 0;
+}
+
+@media (max-width: 500px) {
+	.line {
+		min-height: 50vh;
+	}
+}
+
+
+/***********************************************************
+ ***** VERSE1 ************************************
+ ***********************************************************/
+
+/** VERSE 1 - LINE 1
+ ***********************************************************/
+
+.v1-l1 {
+	overflow: hidden;
+}
+
+.v1-l1 p {
+	animation: fadeIn 2s ease-in;
+}
+
+.v1-l1 span {
+	display: inline-block;
+}
+
+.v1-l1 span:first-child {
+	animation: lyricEmphasis 0.75s 2s linear;
+}
+
+.v1-l1 span:nth-child(2) {
+	animation: lyricEmphasis 0.25s 2.5s linear;
+}
+
+.v1-l1 span:nth-child(3) {
+	animation: lyricEmphasis 1s 2.75s linear;
+}
+
+.v1-l1 span:nth-child(4) {
+	animation: lyricEmphasis 0.25s 3.75s linear;
+}
+
+.v1-l1 span:nth-child(5) {
+	animation: lyricEmphasis 0.75s 4s linear;
+}
+
+.v1-l1 span:nth-child(6) {
+	animation: lyricEmphasis 1s 4.75s linear;
+}
+
+.paper-moon {
+	margin: 10vh auto;
+	width: 40vw;
+	animation: hide 5.75s linear, fadeIn 2s 5.75s ease-in, spin 20s linear infinite;
+}
+
+/** VERSE 1 - LINE 2 & 3
+ ***********************************************************/
+
+.v1-l2n3 {
+	display: block;
+	position: relative;
+	min-height: 100vh;
+	overflow: visible;
+}
+
+.v1-l2n3 img {
+	width: 90%;
+}
+
+.cardboard-sea {
+	z-index: 20;
+	position: absolute;
+	top: 15vh;
+	left: 0;
+	animation: wave 7s infinite linear;
+}
+
+.v1-l2 {
+	position: absolute;
+	top: 10px;
+	z-index: 15;
+	animation: wave 10s infinite linear;
+}
+
+.v1-l3 {
+	z-index: 15;
+	animation: pulse 3s linear infinite, fadeIn 1.5s alternate infinite ease-in-out;
+}
+
+@media (max-width: 750px) {
+	.v1-l2n3 {
+		min-height: 60vh;
+	}
+
+	.cardboard-sea {
+		top: 10vh;
+	}
+}
+
+@media (max-width: 500px) {
+	.v1-l2n3 {
+		min-height: 40vh;
+	}
+
+	.cardboard-sea {
+		top: 7.5vh;
+	}
+}
+
+.cardboard-sea2 {
+	z-index: 10;
+	position: absolute;
+	top: 5vh;
+	right: 5vh;
+	animation: wave 15s reverse infinite linear;
+}
+
+/** VERSE 1 - LINE 4
+ ***********************************************************/
+
+.v1-l4 {
+	max-height: 50vh;
+}
+
+.v1-l4 p {
+	height: 50vh;
+	padding-top: 25vh;
+}
+
+.v1-believe-lyric {
+	animation: rainbowText 5s infinite linear alternate;
+}
+
+/***********************************************************
+ ***** VERSE 2 ************************************
+ ***********************************************************/
+
+.v2 {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.v2-frame {
+	z-index: 20;
+	pointer-events: none;
+	position: fixed;
+	height: 100vh;
+	width: 75vw;
+	animation: smallPulse 3s linear alternate infinite;
+}
+
+
+/** VERSE 2 - CANVAS SKY WRAPPER
+ ***********************************************************/
+
+
+.canvas-sky-wrapper {
+	background-image: url("../img/verse2/sky.jpg");
+	background-size: cover;
+	position: relative;
+	padding: 5vh;
+	padding-top: 10vh;
+	margin: 10vh auto;
+	overflow-y: scroll;
+	height: 75%;
+	width: 75%;
+}
+
+.v2-filler {
+	height: 100vh;
+}
+
+.v2-canvas-lyric {
+	position: sticky;
+	top: 10vh;
+	left: 10vw;
+	animation: fadeIn 1.5s linear alternate infinite,
+		pulse 3s linear alternate infinite;
+}
+
+.v2-muslin-lyric {
+	position: absolute;
+	top: 0;
+	left: 10vh;
+	text-align: center;
+	height: 10vh;
+	animation: fadeIn 1.5s 1.5s linear alternate infinite,
+		pulse 3s 3s linear alternate infinite;
+}
+
+.v2-line {
+	height: 80vh;
+	position: relative;
+}
+
+.v2-line2 {
+	height: 90vh;
+	position: relative;
+
+
+}
+
+.v2-make-believe-lyric {
+	position: absolute;
+	top: 40vh;
+}
+
+.v2-line2 p {
+	position: absolute;
+	bottom: 5vh;
+	right: 0;
+	text-align: right;
+	animation: wave 10s infinite linear, rainbowText 5s infinite linear alternate;
+}
+
+#muslin-tree {
+	width: 25%;
+	position: absolute;
+	top: 15vh;
+	left: 35vh;
+
+}
+
+.v2-grass-wrapper {
+	position: sticky;
+	top: 10vh;
+	height: 220vh;
+}
+
+.v2-grass {
+	z-index: 10;
+	position: sticky;
+	top: 50vh;
+	animation: wave 10s infinite linear;
+}
+
+.v2-muslin-lyric {
+	position: absolute;
+	top: 0;
+	left: 10vh;
+	text-align: center;
+	height: 10vh;
+	animation: fadeIn 1.5s 1.5s linear alternate infinite,
+		pulse 3s 3s linear alternate infinite;
+}
+
+/** VERSE 2 - MEDIA QUERIES
+ ***********************************************************/
+
+@media (max-width: 750px) {
+	.v2 {
+		height: 50vh;
+	}
+
+	.v2-frame {
+		width: 70vw;
+		height: 45vh;
+	}
+
+	.canvas-sky-wrapper {
+		padding: 5vh 5vw;
+		height: 40vh;
+		width: 65vw;
+	}
+}
+
+@media (max-width: 500px) {
+	.v2 {
+		height: 45vh;
+	}
+
+	.v2-frame {
+		width: 70vw;
+		height: 40vh;
+	}
+
+	.canvas-sky-wrapper {
+		padding: 5vh 5vw;
+		height: 35vh;
+		width: 65vw;
+	}
+}
+
+
+/***********************************************************
+ ***** VERSE 3 ************************************
+ ***********************************************************/
+
+.v3 {
+	position: relative;
+	margin: 25vh auto;
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-template-rows: 1fr 2fr;
+	grid-column-gap: 25px;
+	grid-row-gap: 25vh;
+	overflow: visible;
+}
+
+.v3-parade {
+	width: 75%;
+	grid-column: 1/2;
+	grid-row: 1/2;
+	align-self: center;
+	animation: swing 2s ease-in-out infinite;
+}
+
+.v3-l1n2 {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	align-self: center;
+}
+
+.v3-without-lyric1 {
+	margin-bottom: 10vh;
+	animation: rollInOut 3s ease-in-out infinite alternate;
+}
+
+.v3-parade-lyric {
+	color: #ed3224;
+	font-weight: bold;
+	animation: swing 2s ease-in-out infinite;
+}
+
+.v3-l3n4 {
+	grid-column: 1/2;
+	grid-row: 2/3;
+	align-self: top;
+}
+
+.v3-pinball-penny {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	align-self: center;
+}
+
+.v3-pinball {
+	width: 50%;
+}
+
+.v3-penny {
+	width: 10%;
+	position: relative;
+	bottom: 45vh;
+	right: 1vw;
+	animation: bounce 1s cubic-bezier(.5, 0.05, 1, .5) alternate infinite;
+}
+
+.v3-without-lyric2 {
+	margin-bottom: 10vh;
+	animation: rollInOut 3s ease-in-out infinite alternate-reverse;
+}
+
+.v3-penny-lyric {
+	animation: bounce 1s cubic-bezier(.5, 0.05, 1, .5) alternate-reverse infinite;
+}
+
+/***********************************************************
+  ***** VERSE 4 ************************************
+  ***********************************************************/
+
+.v4-l1n2 {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.v4-frame {
+	z-index: 10;
+	pointer-events: none;
+	position: fixed;
+	width: 75vw;
+
+}
+
+
+.bb-content-wrapper {
+	position: relative;
+	background: #ff0101;
+	padding: 5vh;
+	width: 70vw;
+	height: 85vh;
+	overflow-y: scroll;
+}
+
+.v4-barnum-lyric {
+	position: absolute;
+	top: 12vh;
+	left: 12vw;
+	animation: pulse 3s linear alternate infinite;
+}
+
+.v4-bailey-img {
+	width: 26vw;
+	position: absolute;
+	top: 23vh;
+	left: 4vw;
+	animation: swing 10s linear infinite alternate;
+}
+
+.v4-barnum-img {
+	width: 26vw;
+	position: absolute;
+	top: 4vh;
+	right: 2.5vw;
+	animation: swing 10s 1s linear infinite alternate;
+}
+
+.v4-bailey-lyric {
+	position: absolute;
+	top: 72vh;
+	right: 10vw;
+	animation: pulse 3s 1s linear alternate infinite;
+}
+
+.v4-filler {
+	height: 85vh;
+}
+
+.v4-filler2 {
+	height: 150vh;
+}
+
+.v4-phony-lyric {
+	position: sticky;
+	text-align: left;
+	margin: 0;
+	width: 30vw;
+	top: 6vh;
+	left: 15vh;
+	animation: pulse 3s linear alternate infinite;
+}
+
+.v4-circle-pig2 {
+	width: 25vw;
+	height: 30vw;
+	position: sticky;
+	top: 20vh;
+	right: 37vw;
+	animation: swing 10s linear infinite alternate;
+}
+
+.v4-circle-pig1 {
+	width: 25vw;
+	height: 30vw;
+	position: sticky;
+	top: 1vh;
+	left: 50vw;
+	animation: swing 10s 1s linear infinite alternate;
+}
+
+.v4-can-be-lyric {
+	width: 50vw;
+	text-align: right;
+	margin: 0;
+	position: sticky;
+	top: 65vh;
+	right: 15vw;
+	animation: pulse 3s 1s linear alternate infinite;
+}
+
+.v4-l3n4 {
+	height: 100vh;
+}
+
+.v4-l3 {
+	margin-top: 10vh;
+	padding-top: 10vh;
+	animation: fadeInText 2s ease-in-out infinite;
+}
+
+.v4-l4 {
+	margin-top: 10vh;
+	animation: hide 3s, fadeInText 2s 3s ease-in-out infinite, rainbowText 5s infinite linear alternate;
+}
+
+/***********************************************************
+ ***** FOOTER ************************************
+ ***********************************************************/
+
+footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 50vw;
+	margin: 0 auto;
+}
+
+.paper-moon-footer {
+	grid-column: 2 / 3;
+	position: relative;
+	top: 25%;
+	left: 5vw;
+	width: 75%;
+	animation: spin 10s linear infinite;
+}
+
+.ella-f {
+	grid-column: 1 / 2;
+	width: 125%;
+	position: relative;
+	left: -5vw;
+}
+
+
+
+/***********************************************************
+ ***** ANIMATIONS ************************************
+ ***********************************************************/
+
+@keyframes spin {
+	from {
+		transform: rotate(0turn);
+	}
+
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes rainbowText {
+	0% {
+		color: #9400D3;
+	}
+
+	15% {
+		color: #4B0082;
+	}
+
+	30% {
+		color: #0000FF;
+	}
+
+	45% {
+		color: #00FF00;
+	}
+
+	60% {
+		color: #FFFF00;
+	}
+
+	85% {
+		color: #FF7F00;
+	}
+
+	100% {
+		color: #FF0000;
+	}
+
+
+}
+
+@keyframes rollIn {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+		transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes rollOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+		transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+	}
+}
+
+@keyframes rollInOut {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+		transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+	}
+
+	25%, 75% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+		transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+	}
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInText {
+	0%, 100% {
+		opacity: 0;
+	}
+
+	25%, 50%, 75% {
+		opacity: 1;
+	}
+}
+
+@keyframes hide {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes swing {
+	20% {
+		-webkit-transform: rotate3d(0, 0, 1, 15deg);
+		transform: rotate3d(0, 0, 1, 15deg);
+	}
+
+	40% {
+		-webkit-transform: rotate3d(0, 0, 1, -10deg);
+		transform: rotate3d(0, 0, 1, -10deg);
+	}
+
+	60% {
+		-webkit-transform: rotate3d(0, 0, 1, 5deg);
+		transform: rotate3d(0, 0, 1, 5deg);
+	}
+
+	80% {
+		-webkit-transform: rotate3d(0, 0, 1, -5deg);
+		transform: rotate3d(0, 0, 1, -5deg);
+	}
+
+	to {
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+}
+
+
+@keyframes smallPulse {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1);
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes pulse {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		-webkit-transform: scale3d(1.1, 1.1, 1.1);
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes bigPulse {
+	from {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		-webkit-transform: scale3d(2, 2, 2);
+		transform: scale3d(1.25, 1.25, 1.25);
+	}
+
+	to {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes lyricEmphasis {
+	from {
+		transform: scale3d(1, 1, 1) translateY(0);
+	}
+
+	50% {
+		transform: scale3d(1.1, 1.1, 1.1) translateY(-5px);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1) translateY(0);
+	}
+}
+
+@keyframes bounce {
+	from {
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		transform: translate3d(0, 200px, 0);
+	}
+}
+
+
+/** VERSE1 ANIMATIONS
+  ***********************************************************/
+
+@keyframes moonAnimation {
+	from {
+		transform: scale3d(1, 1, 1) rotate(0turn);
+	}
+
+	25% {
+		transform: scale3d(1.15, 1.15, 1.15) rotate(0.25turn);
+	}
+
+	50% {
+		transform: scale3d(1, 1, 1) rotate(0.5turn);
+	}
+
+	75% {
+		transform: scale3d(0.85, 0.85, 0.85) rotate(0.75turn);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1) rotate(1turn);
+	}
+}
+
+
+@keyframes swing {
+	0%, 100% {
+		transform: rotate(-10deg);
+	}
+
+	20% {
+		transform: scale(.95);
+	}
+
+	50% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: scale(.95);
+	}
+}
+
+@keyframes wave {
+	0, 100% {
+		transform: translateX(0) translateY(0) rotate(-5deg);
+
+	}
+
+	20% {
+		transform: translateX(2%) translateY(-2%) scale(0.95) rotate(5deg);
+
+	}
+
+	50% {
+		transform: translateX(4%) translateY(0) rotate(-5deg);
+
+	}
+
+	80% {
+		transform: translateX(2%) translateY(2%) scale(0.95) rotate(5deg);
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** JUST FOR MORE ROOM :)
+	  ***********************************************************/

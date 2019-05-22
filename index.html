@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="RISD 2019 Wintersession Web Design Compilation Site">
+	<meta name="author" content="Jason Hebert">
+
+	<title>Compilation</title>
+
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="scripts/jquery-touch-punch.js"></script>
+
+	<script src="scripts/scripts.js"></script>
+	<script src="scripts/jquery-ui.js"></script>
+</head>
+
+
+<body id="body" class="wide">
+
+	<div id="landing"></div>
+
+	<!-- all solution pipes -->
+	<img src="img/pipes/solutions/about-solution.svg" id="abt-sol" style="grid-area: abtSol; transform: rotate(0deg);" class="pipe pipe-sol abt" />
+	<img src="img/pipes/solutions/exer-solution.svg" id="exer-sol" style="grid-area: exerSol; transform: rotate(0deg);" class="pipe pipe-sol exer" />
+	<img src="img/pipes/solutions/proc-solution.svg" id="proc-sol" style="grid-area: procSol; transform: rotate(0deg);" class="pipe pipe-sol proc" />
+	<img src="img/pipes/solutions/proj-solution.svg" id="proj-sol" style="grid-area: projSol; transform: rotate(0deg);" class="pipe pipe-sol proj" />
+	<img src="img/pipes/solutions/rsp-solution.svg" id="rsp-sol" style="grid-area: rspSol; transform: rotate(0deg);" class="pipe pipe-sol rsp" />
+
+
+	<!-- separated elements to the grid -->
+
+	<div id="top"></div>
+	<div id="abt" class="abt-after link-block">
+		<p class="abt-after">aboutMe</p>
+	</div>
+	<div id="proj" class="proj-after link-block">
+		<p class="proj-after">projects</p>
+	</div>
+	<div id="input" class="inp">
+		<p class="inp">input</p>
+	</div>
+	<div id="rsp" class="rsp-after link-block">
+		<p class="rsp-after">responses</p>
+	</div>
+	<div id="exer" class="exer-after link-block">
+		<p class="exer-after">exercises</p>
+	</div>
+	<div id="proc" class="proc-after link-block">
+		<p class="proc-after">processes</p>
+	</div>
+
+	<!-- all pipes in the 'a' column / row -->
+	<img src="img/pipes/end.svg" id="a2" style="grid-area: a2; transform: rotate(0deg);" class="pipe " />
+	<img src="img/pipes/straight.svg" id="a3" style="grid-area: a3; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide" />
+	<img src="img/pipes/straight.svg" id="a4" style="grid-area: a4; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide" />
+	<img src="img/pipes/corner.svg" id="a5" style="grid-area: a5; transform: rotate(0deg);" class="pipe" />
+	<img src="img/pipes/corner.svg" id="a6" style="grid-area: a6; transform: rotate(270deg);" class="pipe rsp-after" />
+	<img src="img/pipes/straight.svg" id="a7" style="grid-area: a7; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide rsp-after" />
+	<img src="img/pipes/corner.svg" id="a8" style="grid-area: a8; transform: rotate(0deg);" class="pipe rsp-after" />
+
+	<!-- all pipes in the the 'b' column / row -->
+	<img src="img/pipes/corner.svg" id="b1" style="grid-area: b1; transform: rotate(0deg);" class="pipe abt-after" />
+	<img src="img/pipes/corner.svg" id="b2" style="grid-area: b2; transform: rotate(270deg);" class="pipe abt-after" />
+	<img src="img/pipes/straight.svg" id="b3" style="grid-area: b3; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide abt-after" />
+	<img src="img/pipes/corner.svg" id="b4" style="grid-area: b4; transform: rotate(0deg);" class="pipe abt-after" />
+	<img src="img/pipes/end.svg" id="b5" style="grid-area: b5; transform: rotate(270deg);" class="pipe " />
+	<img src="img/pipes/corner.svg" id="b6" style="grid-area: b6; transform: rotate(180deg);" class="pipe rsp-after" />
+	<img src="img/pipes/corner.svg" id="b7" style="grid-area: b7; transform: rotate(0deg);" class="pipe rsp-after" />
+	<img src="img/pipes/corner.svg" id="b8" style="grid-area: b8; transform: rotate(180deg);" class="pipe rsp-after" />
+	<img src="img/pipes/3-sides.svg" id="b9" style="grid-area: b9; transform: rotate(180deg);" class="pipe rsp-after" />
+	<img src="img/pipes/straight.svg" id="b10" style="grid-area: b10; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide rsp-after" />
+
+	<!-- all pipes in the 'c' column / row -->
+	<img src="img/pipes/corner.svg" id="c1" style="grid-area: c1; transform: rotate(180deg);" class="pipe abt-after" />
+	<img src="img/pipes/corner.svg" id="c2" style="grid-area: c2; transform: rotate(90deg);" class="pipe abt-after" />
+	<div id="abt-box" style="grid-area: c4; border-color: #ffd319;" class="wide-drop-area drop-area abt">
+	</div>
+	<img src="img/pipes/3-sides.svg" id="c7" style="grid-area: c7; transform: rotate(90deg);" class="pipe rsp-after" />
+	<img src="img/pipes/straight.svg" id="c8" style="grid-area: c8; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide rsp-after" />
+	<img src="img/pipes/corner.svg" id="c9" style="grid-area: c9; transform: rotate(90deg);" class="pipe rsp-after" />
+
+	<!-- all pipes in the 'd' column / row -->
+	<img src="img/pipes/straight.svg" id="d1" style="grid-area: d1; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide inp" />
+	<img src="img/pipes/3-sides.svg" id="d2" style="grid-area: d2; transform: rotate(180deg);" class="pipe inp" />
+	<img src="img/pipes/straight.svg" id="d3" style="grid-area: d3; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide inp" />
+	<img src="img/pipes/4-corners.svg" id="d4" style="grid-area: d4; transform: rotate(0deg);" class="pipe inp" />
+	<img src="img/pipes/straight.svg" id="d5" style="grid-area: d5; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide inp" />
+	<img src="img/pipes/straight.svg" id="d6" style="grid-area: d6; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide inp" />
+	<div id="d7" class="rsp-proj-input rsp proj" style="grid-area: d7;">
+		<div id="rsp-box" style="border-color: #ff901f" class="wide-drop-area drop-area rsp"></div>
+		<div id="proj-box" style="border-color: #8c1eff" class="wide-drop-area drop-area proj"></div>
+	</div>
+	<img src="img/pipes/3-sides.svg" id="d8" style="grid-area: d8; transform: rotate(180deg);" class="pipe proj-after" />
+	<img src="img/pipes/straight.svg" id="d9" style="grid-area: d9; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide proj-after" />
+	<img src="img/pipes/straight.svg" id="d10" style="grid-area: d10; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide proj-after" />
+
+	<!-- all pipes in the 'e' column / row -->
+	<img src="img/pipes/straight.svg" id="e1" style="grid-area: e1; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide inp" />
+	<img src="img/pipes/3-sides.svg" id="e2" style="grid-area: e2; transform: rotate(0deg);" class="pipe inp" />
+	<img src="img/pipes/corner.svg" id="e3" style="grid-area: e3; transform: rotate(0deg);" class="pipe inp" />
+	<img src="img/pipes/corner.svg" id="e4" style="grid-area: e4; transform: rotate(180deg);" class="pipe inp" />
+	<img src="img/pipes/3-sides.svg" id="e5" style="grid-area: e5; transform: rotate(180deg);" class="pipe inp" />
+	<img src="img/pipes/straight.svg" id="e6" style="grid-area: e6; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide inp" />
+	<div id="proc-box" style="grid-area: e7; border-color: #f222ff;" class="wide-drop-area drop-area proc"></div>
+	<img src="img/pipes/corner.svg" id="e8" style="grid-area: e8; transform: rotate(180deg);" class="pipe proj-after" />
+	<img src="img/pipes/straight.svg" id="e9" style="grid-area: e9; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide proj-after" />
+	<img src="img/pipes/straight.svg" id="e10" style="grid-area: e10; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide proj-after" />
+
+	<!-- all pipes in the 'f' column / row -->
+	<img src="img/pipes/corner.svg" id="f3" style="grid-area: f3; transform: rotate(180deg);" class="pipe inp" />
+	<img src="img/pipes/straight.svg" id="f4" style="grid-area: f4; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide inp" />
+	<div id="exer-box" style="grid-area: f5; border-color: #ff2975;" class="wide-drop-area drop-area exer"></div>
+	<img src="img/pipes/3-sides.svg" id="f7" style="grid-area: f7; transform: rotate(90deg);" class="pipe proc-after" />
+	<img src="img/pipes/straight.svg" id="f8" style="grid-area: f8; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide proc-after" />
+	<img src="img/pipes/corner.svg" id="f9" style="grid-area: f9; transform: rotate(0deg);" class="pipe proc-after" />
+
+	<!-- all pipes in the 'g' column / row -->
+	<img src="img/pipes/straight.svg" id="g1" style="grid-area: g1; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide exer-after" />
+	<img src="img/pipes/3-sides.svg" id="g2" style="grid-area: g2; transform: rotate(180deg);" class="pipe exer-after" />
+	<img src="img/pipes/3-sides.svg" id="g3" style="grid-area: g3; transform: rotate(180deg);" class="pipe exer-after" />
+	<img src="img/pipes/straight.svg" id="g4" style="grid-area: g4; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide exer-after" />
+	<img src="img/pipes/corner.svg" id="g5" style="grid-area: g5; transform: rotate(90deg);" class="pipe exer-after" />
+	<img src="img/pipes/end.svg" id="g7" style="grid-area: g7; transform: rotate(270deg);" class="pipe proc-after" />
+	<img src="img/pipes/end.svg" id="g8" style="grid-area: g8; transform: rotate(90deg);" class="pipe " />
+	<img src="img/pipes/corner.svg" id="g9" style="grid-area: g9; transform: rotate(180deg);" class="pipe proc-after" />
+	<img src="img/pipes/straight.svg" id="g10" style="grid-area: g10; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide proc-after" />
+
+	<!-- all pipes in the 'h' column / row -->
+	<img src="img/pipes/corner.svg" id="h2" style="grid-area: h2; transform: rotate(180deg);" class="pipe exer-after" />
+	<img src="img/pipes/corner.svg" id="h3" style="grid-area: h3; transform: rotate(90deg);" class="pipe exer-after" />
+	<img src="img/pipes/end.svg" id="h6" style="grid-area: h6; transform: rotate(0deg);" class="pipe " />
+	<img src="img/pipes/straight.svg" id="h7" style="grid-area: h7; transform: rotate(0deg);" class="pipe pipe-str pipe-str-wide" />
+	<img src="img/pipes/3-sides.svg" id="h8" style="grid-area: h8; transform: rotate(0deg);" class="pipe " />
+	<img src="img/pipes/end.svg" id="h9" style="grid-area: h9; transform: rotate(180deg);" class="pipe " />
+
+
+
+</body>
+
+</html>

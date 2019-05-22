@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="A digital record presenting data extracted
+	about climate change from the Government.">
+	<meta name="author" content="Jason Hebert">
+
+	<title> Project 3 - Record </title>
+
+	<!-- CSS STYLESHEETS -->
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/animations.css" />
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+
+	<!-- REGULAR JQUERY SCRIPT -->
+	<script src="scripts/jquery-3.3.1.js"></script>
+
+	<!-- JQUERY UI SCRIPTS -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="scripts/jquery-touch-punch.js"></script>
+
+	<!-- DATA AND SITE-SPECIFIC SCRIPTS -->
+	<script src="scripts/data.js" type="text/javascript"></script>
+	<script src="scripts/scripts.js" type="text/javascript"></script>
+
+	<!-- DATA VISUALIZATION SCRIPTS -->
+	<script src="scripts/data-visual-scripts/sea-level-scripts.js" type="text/javascript"></script>
+	<script src="scripts/data-visual-scripts/ice-sheets-scripts.js" type="text/javascript"></script>
+	<script src="scripts/data-visual-scripts/temp-scripts.js" type="text/javascript"></script>
+	<script src="scripts/data-visual-scripts/C02-scripts.js" type="text/javascript"></script>
+
+</head>
+
+<body id="body" class="body-wide">
+
+
+	<!-- SIDEBAR -->
+	<div id="sidebar" class="sidebar-wide">
+
+		<div id="globe">
+			<img src="img/globe.svg" alt="Globe Icon" />
+		</div>
+
+		<div id="icons-section" class="icons-section-wide">
+			<img src="img/water-droplet.svg" class="icon" id="sea-level-icon" alt="Sea Level Icon" />
+			<span id="sea-level-desc" class="description"> Drag to view sea level</span>
+
+			<img src="img/temp.svg" class="icon" id="global-temp-icon" alt="Global Temperature Icon" />
+			<span id="global-temp-desc" class="description">Drag to view global temp levels</span>
+
+			<img src="img/icicles.svg" class="icon" id="ice-sheets-icon" alt="Ice Sheet Level Icon" />
+			<span id="ice-sheet-desc" class="description">Drag to view ice sheet levels</span>
+
+			<img src="img/cloud.svg" class="icon" id="C02-levels-icon" alt="C02 Levels Icon" />
+			<span id="c02-desc" class="description">Drag to view carbon dioxide levels</span>
+		</div>
+
+	</div>
+	<!-- SIDEBAR -->
+
+	<!-- RIGHT PANEL -->
+	<div id="right-panel">
+		<div id="data-window">
+
+			<div id="canvas">
+				<div id="drop-indicator">
+					<p>drop an icon here!</p>
+				</div>
+				<div id="c02-layer"></div>
+				<img src="img/C02/fog.jpg" class="data-img fog" id="fog" alt="C02 Level Fog Image" />
+				<img src="img/sea-level/wave.svg" class="data-img waves" id="wave" alt="Sea Level Waves" />
+				<img src="img/ice-level/ice.svg" class="data-img ice-bergs" id="ice" alt="Ice Sheet Level Berg" />
+			</div>
+		</div>
+
+		<div id="time-slider">
+			<div id=time-slider-line><img src="img/time-slider/hourglass-start.svg" id="hourglass" alt="Hourglass Time Slider Icon" /></div>
+		</div>
+	</div>
+	<!-- RIGHT PANEL -->
+
+</body>
+
+</html>

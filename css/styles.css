@@ -1,0 +1,189 @@
+/***********************************************************
+ ***** RESET ALL STYLES ************************************
+ ***********************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, wind table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/***********************************************************
+ ***** CUSTOM CSS STYLES ************************************
+ ***********************************************************/
+
+@font-face {
+	font-family: 'Share Tech Mono';
+	src: url('ShareTechMono-Regular.ttf');
+}
+
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: black;
+	color: #47FF0A;
+	font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+	display: grid;
+	padding: 5%;
+	grid-template-rows: repeat(10, 1fr);
+	grid-template-columns: auto repeat(10, 1fr) auto;
+	grid-gap: 1px;
+	opacity: 1;
+}
+
+#landing {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: black;
+	z-index: 1000;
+}
+
+.wide {
+	grid-template-areas:
+		". rspSol . projSol . procSol . exerSol . abtSol . ."
+		"top top top top top top . . . . . ."
+		". a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 ."
+		"abt b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 rsp"
+		". c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 ."
+		"inp d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 proj"
+		"inp e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 proj"
+		". f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 ."
+		"exer g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 proc"
+		". h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 .";
+}
+
+.tall {
+	grid-template-areas:
+		". exer . inp inp . abt . top ."
+		"h1 g1 f1 e1 d1 c1 b1 a1 top ."
+		"h2 g2 f2 e2 d2 c2 b2 a2 top rspSol"
+		"h3 g3 f3 e3 d3 c3 b3 a3 top ."
+		"h4 g4 f4 e4 d4 c4 b4 a4 top projSol"
+		"h5 g5 f5 e5 d5 c5 b5 a5 top ."
+		"h6 g6 f6 e6 d6 c6 b6 a6 . procSol"
+		"h7 g7 f7 e7 d7 c7 b7 a7 . ."
+		"h8 g8 f8 e8 d8 c8 b8 a8 . exerSol"
+		"h9 g9 f9 e9 d9 c9 b9 a9 . ."
+		"h10 g10 f10 e10 d10 c10 b10 a10 . abtSol"
+		". proc . proj proj . rsp . . .";
+}
+
+div {
+	width: 100%;
+	height: 100%;
+}
+
+.wide-drop-area {
+	border-style: solid;
+	border-width: 5px;
+}
+
+.tall-drop-area {
+	border-style: solid;
+	border-width: 3px;
+}
+
+#top {
+	grid-area: top;
+}
+
+#abt {
+	background: #ffd319;
+	grid-area: abt;
+}
+
+#proj {
+	background: #8c1eff;
+	grid-area: proj;
+}
+
+#rsp {
+	background: #ff901f;
+	grid-area: rsp;
+}
+
+#input {
+	background: white;
+	grid-area: inp;
+}
+
+#proc {
+	background: #f222ff;
+	grid-area: proc;
+}
+
+#exer {
+	background: #ff2975;
+	grid-area: exer;
+}
+
+#d7 {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.link-block {
+	opacity: 0.25;
+	z-index: 100;
+}
+
+.inp, .link-block {
+	color: black;
+}
+
+p {
+	font-size: 2rem;
+	font-weight: bold;
+	opacity: 1;
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pipe {
+	opacity: 1.0;
+	width: 100%;
+	height: 100%;
+}
+
+.pipe-sol {
+	z-index: 100;
+}
+
+.pipe-sol:hover {
+	cursor: grab;
+}

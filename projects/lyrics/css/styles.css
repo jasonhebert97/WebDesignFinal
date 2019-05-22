@@ -1,0 +1,427 @@
+/***********************************************************
+ ***** RESET ALL STYLES ************************************
+ ***********************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/***********************************************************
+ ***** CSS STYLES ******************************************
+ ***********************************************************/
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	font-family: monospace;
+	overflow: hidden;
+	color: white;
+	font-size: calc(10px + (25 - 10) * ((100vw - 300px) / (1600 - 300)));
+}
+
+body {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1%;
+	grid-template-areas:
+		"verse1 verse2"
+		"verse4 verse3";
+}
+
+.verse {
+	display: inline-block;
+	max-width: 100%;
+	max-height: 100%;
+	overflow: scroll;
+	position: relative;
+}
+
+img {
+	width: 100%;
+}
+
+#verse1 {
+	grid-area: verse1;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#verse2 {
+	grid-area: verse2;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#verse3 {
+	grid-area: verse3;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#verse4 {
+	grid-area: verse4;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.frame {
+	pointer-events: none;
+	position: fixed;
+	z-index: 1000;
+}
+
+/**** VERSE 1
+******************************************************/
+
+#paper-moon {
+	max-height: 60%;
+	width: auto;
+	margin-top: 5%;
+}
+
+#v1-l1 {
+	text-align: center;
+	margin-top: 10%;
+}
+
+#v1-l2 {
+	position: relative;
+}
+
+#card-sea1 {
+	position: absolute;
+	top: 10%;
+	z-index: 10;
+}
+
+#card-sea2 {
+	position: absolute;
+	top: 5%;
+	z-index: 5;
+}
+
+#v1-l2 p {
+	text-align: center;
+	position: relative;
+	top: 25%;
+	z-index: 15;
+}
+
+#v1-l3 p:first-child {
+	text-align: center;
+	position: relative;
+	top: 25%;
+}
+
+#v1-l3 p:last-child {
+	text-align: center;
+	position: relative;
+	top: 50%;
+}
+
+
+
+/**** VERSE 2
+******************************************************/
+
+#canvas-sky-wrapper {
+	width: 85%;
+	height: 85%;
+	position: relative;
+	overflow: scroll;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#v2-grass {
+	display: inline-block;
+	width: 100%;
+	height: 200%;
+	position: absolute;
+	overflow: scroll;
+}
+
+#v2-grass-img {
+	display: inline-block;
+	position: sticky;
+	top: 50%;
+	transform: translate(0, -50%);
+	z-index: 100;
+}
+
+#muslin-tree {
+	display: block;
+	height: 100%;
+	position: relative;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%, 0);
+}
+
+#v2-line1 {
+	width: 100%;
+	height: 25%;
+	position: relative;
+	text-align: center;
+}
+
+#v2-lyric-first {
+	display: inline-block;
+	position: relative;
+}
+
+#v2-line2 {
+	position: relative;
+	width: 100%;
+	height: 25%;
+	text-align: center;
+}
+
+#v2-line2 p {
+	display: inline-block;
+	position: relative;
+	top: 50%;
+}
+
+#v2-l3 {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+}
+
+#v2-l3 p {
+	display: inline-block;
+	position: relative;
+	top: 35%;
+}
+
+#v2-l4 {
+	width: 100%;
+	height: 50%;
+	position: relative;
+	text-align: center;
+}
+
+#v2-l4 p {
+	display: inline-block;
+	position: relative;
+	top: 50%;
+}
+
+/**** VERSE 3
+******************************************************/
+
+.v3 img {
+	max-height: 100%;
+	width: auto;
+}
+
+#v3-l1 p {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	z-index: 15;
+	transform: translate(0, -50%);
+}
+
+#v3-l2 img {
+	max-width: 75%;
+	max-height: 75%;
+	position: relative;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%);
+}
+
+#v3-l2 p {
+	text-align: center;
+	margin-top: 5%;
+}
+
+#v3-l3 p {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	z-index: 15;
+	transform: translate(0, -50%);
+}
+
+#v3-l4 {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"text images";
+}
+
+#v3-l4-text {
+	width: 100%;
+	height: 100%;
+	grid-area: text;
+}
+
+#v3-l4-text p {
+	width: 75%;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+#v3-l4-imgs {
+	grid-area: images;
+	width: 100%;
+	height: 100%;
+}
+
+#v3-l4-imgs img {
+	height: 90%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+/**** VERSE 4
+******************************************************/
+
+#bb-content-wrapper {
+	width: 95%;
+	height: 95%;
+	position: relative;
+	overflow: scroll;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"bb"
+		"pp";
+}
+
+#bb-content {
+	grid-area: bb;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 8% 34% auto 34% 8%;
+	grid-template-rows: 7% 20% auto 10% 25% 7%;
+	grid-template-areas:
+		". . . . ."
+		". tt tt ri ."
+		". li . ri ."
+		". li . ri ."
+		". li bt bt ."
+		". . . . .";
+}
+
+#v4-l1 {
+	grid-area: tt;
+	display: inline-block;
+	align-self: center;
+	justify-self: center;
+}
+
+#v4-bailey-img {
+	grid-area: li;
+}
+
+#v4-barnum-img {
+	grid-area: ri;
+}
+
+#v4-l2 {
+	grid-area: bt;
+	display: inline-block;
+	align-self: center;
+	justify-self: center;
+}
+
+#pp-content {
+	grid-area: pp;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 8% 34% auto 34% 8%;
+	grid-template-rows: 7% 20% auto 10% 25% 7%;
+	grid-template-areas:
+		". . . . ."
+		". tt tt ri ."
+		". li . ri ."
+		". li . ri ."
+		". li bt bt ."
+		". . . . .";
+}
+
+#v4-l3 {
+	grid-area: tt;
+	display: inline-block;
+	align-self: center;
+	justify-self: center;
+}
+
+#v4-circle-pig2 {
+	grid-area: li;
+}
+
+#v4-circle-pig1 {
+	grid-area: ri;
+}
+
+#v4-l4 {
+	grid-area: bt;
+	display: inline-block;
+	align-self: center;
+	justify-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for wiggle room :) */
